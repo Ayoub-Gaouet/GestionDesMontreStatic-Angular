@@ -1,0 +1,37 @@
+<div class="container">
+    <div>
+        <h2>Ajouter un Montre :</h2>
+    </div>
+    <form>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Montre</label>
+            <input type="text" [(ngModel)]="newMontre.idMontre" name="idMontre" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom Montre</label>
+            <input type="text" [(ngModel)]="newMontre.nomMontre" name="nomMontre" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Prix Montre</label>
+            <input type="number" [(ngModel)]="newMontre.prixMontre" name="prixMontre" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Date création</label>
+            <input type="date" [(ngModel)]="newMontre.dateCreation" name="dateCreation" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Marque</label>
+            <select class="form-control form-control-lg" id="idMar" name="idMar" [(ngModel)]="newIdMar">
+                <option *ngFor="let mar of marque" [value]="mar.idMar" >
+                    {{mar.nomMar}}
+                </option>
+            </select>
+        </div>
+        <div class="mt-2">
+
+            <button type="submit" (click)="addMontre()" class="btn btn-success">Ajouter</button>
+        </div>
+
+    </form>
+
+</div>
